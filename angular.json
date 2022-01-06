@@ -35,6 +35,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/theme.scss",
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
