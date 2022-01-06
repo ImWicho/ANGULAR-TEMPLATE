@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IconService } from '@services/icon.service';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +14,9 @@ export class AppComponent {
               private iconSvc: IconService) {
     this.breakpointObserver
       .observe([Breakpoints.Small, Breakpoints.XSmall])
-      .subscribe((data: any) => {
-        // ACTION HERE
+      .subscribe((data: BreakpointState) => {
+        console.log(data.matches);
+        
       });
   }
 }
