@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ export class AppComponent {
     this.breakpointObserver.observe([
       Breakpoints.Small,
       Breakpoints.XSmall
-    ]).subscribe((data: any) => {
+    ]).subscribe((data: BreakpointState) => {
       // ACTION HERE
     });
   }
