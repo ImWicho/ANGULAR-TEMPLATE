@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SidenavService } from '@services/sidenav.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,8 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ToolbarComponent  {
 
-  constructor() { }
+  constructor(private sidenavService: SidenavService) { }
 
-  
+  toggleSidenav():void{
+    this.sidenavService.toggle$.next();
+  }
 
 }

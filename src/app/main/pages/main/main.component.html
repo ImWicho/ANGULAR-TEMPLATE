@@ -1,5 +1,5 @@
 <mat-drawer-container>
-  <mat-drawer mode="side" opened #matDrawer>
+  <mat-drawer [mode]="!isResponsive ? 'side' : 'over'"  [opened]="!isResponsive" #matDrawer>
     <app-sidenav></app-sidenav>
   </mat-drawer>
   <mat-drawer-content>
