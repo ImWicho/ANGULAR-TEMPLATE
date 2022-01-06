@@ -10,6 +10,7 @@
       "@components/*" : ["app/shared/components/*"],
       "@guards/*" : ["app/shared/guards/*"],
       "@pipes/*" : ["app/shared/pipes/*"],
+      "@redux/*" : ["app/store/*"]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
