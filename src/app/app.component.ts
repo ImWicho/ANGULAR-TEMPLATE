@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
 import { IconService } from '@services/icon.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'angular-template';
 
-  constructor(private iconSvc: IconService){}
+  constructor(private breakpointObserver: BreakpointObserver,
+              private iconSvc: IconService) {
+    this.breakpointObserver
+      .observe([Breakpoints.Small, Breakpoints.XSmall])
+      .subscribe((data: any) => {
+        // ACTION HERE
+      });
+  }
 }
